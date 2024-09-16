@@ -1,0 +1,44 @@
+@startuml diagram
+class Person {
+    - firstName: String
+    - lastName: String
+    - ID: String
+    - title: String
+    - YOB: int
+
+    + getFirstName(): String
+    + getLastName(): String
+    + getID(): String
+    + getTitle(): String
+    + getYOB(): int
+    + fullName(): String
+    + formalName(): String
+    + getAge(): int
+    + getAge(int year): int
+    + toCSV(): String
+    + toJSON(): String
+    + toXML(): String
+}
+
+class Product {
+    - name: String
+    - description: String
+    - ID: String
+    - cost: double
+
+    + getName(): String
+    + getDescription(): String
+    + getID(): String
+    + getCost(): double
+    + toCSV(): String
+    + toJSON(): String
+    + toXML(): String
+}
+
+class SafeInputObj {
+    - pipe: Scanner
+
+    + getNonZeroLengthString(prompt: String): String
+    + getInt(prompt: String): int
+}
+@enduml
